@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Easle Main Page</title>
+        <meta name="description" content="">
+        <!-- 
+    	Volton Template
+    	http://www.templatemo.com/preview/templatemo_441_volton
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->        
+    
+<!-- New Quiz Modal -->
+        <div class="modal fade" id="QuizModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">New Quiz</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">Quiz Name</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Short Answer Question</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Multiple Choice Question</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                    <form class="answers">
+                        <div>
+                            <input type="radio" name="q1" value="a" id="q1a">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="b" id="q1b">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="c" id="q1c">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="d" id="q1d">
+                            <input type ="text"></input>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Short Answer Question</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">True/False Question</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                    <form class="answers">
+                        <ul class="answers">
+                            <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">True</label><br/>
+                           <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">False</label><br/>
+                        </ul>
+                    </form>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Short Answer Question</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Multiple Choice Question</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                    <form class="answers">
+                        <div>
+                            <input type="radio" name="q1" value="a" id="q1a">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="b" id="q1b">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="c" id="q1c">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="d" id="q1d">
+                            <input type ="text"></input>
+                        </div>
+                    </form>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save Quiz</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- New Poll Modal -->
+        <div class="modal fade" id="PollModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">New Poll</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="control-label">Poll Name</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Multiple Choice Question</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                    <form class="answers">
+                        <div>
+                            <input type="radio" name="q1" value="a" id="q1a">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="b" id="q1b">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="c" id="q1c">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="d" id="q1d">
+                            <input type ="text"></input>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Yes/No Question</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                    <form class="answers">
+                        <ul class="answers">
+                            <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Yes</label><br/>
+                           <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">No</label><br/>
+                        </ul>
+                    </form>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Multiple Choice Question</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                    <form class="answers">
+                        <div>
+                            <input type="radio" name="q1" value="a" id="q1a">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="b" id="q1b">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="c" id="q1c">
+                            <input type ="text"></input>
+                        </div>
+                        <div>
+                            <input type="radio" name="q1" value="d" id="q1d">
+                            <input type ="text"></input>
+                        </div>
+                    </form>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save Poll</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Stuff in Header -->
+
+        <div class="responsive-header visible-xs visible-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="top-section">
+                            <div class="profile-image">
+                                <img src="img/profile.jpg" alt="Volton">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-title">Professor Sheckles</h3>
+                                <p class="profile-description">Northwestern University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                <div class="main-navigation responsive-menu">
+                    <ul class="navigation">
+                        <li><a href="#top"><i class="fa fa-home"></i>"Lecture 1 Overview"</a></li>
+                        <li><a href="#about"><i class="fa fa-user"></i>Quizes</a></li>
+                        <li><a href="#projects"><i class="fa fa-newspaper-o"></i>Polls</a></li>
+                        <li><a href="#contact"><i class="fa fa-envelope"></i>Options</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar-menu hidden-xs hidden-sm">
+            <div class="top-section">
+                <div class="profile-image">
+                    <img src="img/profile.jpg" alt="Volton">
+                </div>
+                <h3 class="profile-title">Professor Sheckles</h3>
+                <p class="profile-description">Northwestern University</p>
+            </div> <!-- top-section -->
+            <div class="main-navigation">
+                <ul class="navigation">
+                    <li><a href="#top"><i class="fa fa-globe"></i>"Lecture 1 Overview"</a></li>
+                    <li><a href="#about"><i class="fa fa-pencil"></i>Quizes</a></li>
+                    <li><a href="#projects"><i class="fa fa-paperclip"></i>Polls</a></li>
+                    <li><a href="#contact"><i class="fa fa-link"></i>Options</a></li>
+                </ul>
+            </div> <!-- .main-navigation -->
+
+        </div> <!-- .sidebar-menu -->
+        
+
+        <div class="banner-bg" id="top">
+            <div class="banner-overlay"></div>
+            <div class="welcome-text">
+                <h2>CSGO 101 | Lecture 1</h2>
+                <h5>"Are we rushing in or going all sneaky beaky like?"</h5>
+            </div>
+        </div>
+
+
+<!-- ****************** QUIZES ****************** -->
+        <div class="main-content">
+            <div class="fluid-container">
+
+                <div class="content-wrapper">
+                
+                    <!-- ABOUT -->
+                    <div class="page-section" id="about">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Quizes</h4>
+                            <div id="page-wrapper">
+            
+            
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-4">
+                <!-- /.col-lg-8 -->
+                    
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="classesSideBar.html" data-slidepanel="panel" class="list-group-item">Quiz 1: To B or not to B?</a>
+
+                                <a href="classesSideBar.html" class="list-group-item">
+                                     Quiz 2: Halftime, checking in
+                                    
+                                </a>
+                                <a href="classesSideBar.html" class="list-group-item">
+                                     Quiz 3: Today's Material
+                                    
+                                </a>
+                                
+                            </div>
+                            <!-- /.list-group -->
+                            <a href="#" type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#QuizModal">New Quiz</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+
+                
+                    <!-- /.panel -->
+            </div>       
+            <!-- /.row -->
+                    </div>
+                            <hr>
+                        </div>
+                    </div> <!-- #about -->
+                    </div>
+                    
+<!-- ************** POLLS *************************** -->
+<div class="page-section" id="projects">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="widget-title">Polls</h4>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a href="classesSideBar.html" data-slidepanel="panel" class="list-group-item">Poll 1: Is Dust II a good map?</a>
+
+                            <a href="classesSideBar.html" class="list-group-item">
+                                     Poll 2: Have you bought a CSGO Knife?</a>
+
+                            <a href="classesSideBar.html" class="list-group-item">
+                                     Poll 3: Do you prefer T or CT?!?</a>
+                        </div>
+                            <a href="#" type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#PollModal">New Poll</a>
+                        </div>
+                </div>
+            </div> 
+
+        </div>
+    </div>
+</div> <!-- .projects-holder -->
+
+    
+
+                    <hr>
+
+<!-- ********************* OPTIONS ******************* -->
+<div class="page-section" id="contact">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <h4 class="widget-title">Options</h4>
+            <div class="col-lg-4">
+            <div class="row">
+                
+
+            <form action="#" method="post" class="contact-form">
+                <div>
+                    <fieldset class="col-md-12 col-sm-12">
+                        <input type="submit" class="button big default" value="Start Lecture">
+                        <input type="submit" class="button big default" value="Review Lecture">
+                    </fieldset>
+                </div>
+            </form>  
+                </div>
+
+            </div> 
+ <div class="row" id="footer">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright-text">Copyright &copy; 2016 Easel Inc.</p>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+</div> <!-- .projects-holder -->
+         
+
+         </div>    
+
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/min/plugins.min.js"></script>
+        <script src="js/min/main.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
